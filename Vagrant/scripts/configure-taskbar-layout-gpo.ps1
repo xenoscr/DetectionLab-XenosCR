@@ -1,4 +1,3 @@
-# Purpose: Install the GPO that disables Windows Defender and AMSI
 Write-Host "$('[{0:HH:mm}]' -f (Get-Date)) Importing the GPO to set the Taskbar layout..."
 Import-GPO -BackupGpoName 'Taskbar Layout' -Path "c:\vagrant\resources\GPO\taskbar_layout" -TargetName 'Taskbar Layout' -CreateIfNeeded
 

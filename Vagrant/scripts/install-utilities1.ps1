@@ -12,12 +12,7 @@ Write-Host "$('[{0:HH:mm}]' -f (Get-Date)) Installing utilities..."
 If ($(hostname) -eq "win10") {
   # Install Edge
   choco install -y --limit-output --no-progress microsoft-edge
-  # Install Visual Studio 2019 Community
-  choco install -y --limit-output --no-progress visualstudio2019community --package-parameters "--config c:\vagrant\resources\windows\vsconfig"
 }
 choco install -y --limit-output --no-progress NotepadPlusPlus 7zip processhacker
-
-# This repo often causes failures due to incorrect checksums, so we ignore them for Chrome
-choco install -y --limit-output --no-progress --ignore-checksums GoogleChrome 
 
 Write-Host "$('[{0:HH:mm}]' -f (Get-Date)) Utilties installation complete!"
